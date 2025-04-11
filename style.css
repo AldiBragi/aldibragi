@@ -1,11 +1,17 @@
 body {
   background-color: #000;
   margin: 0;
-  padding: 40px 0 0 0;
   font-family: 'Segoe UI', sans-serif;
+}
+
+.page-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
 }
 
 /* Hamburger */
@@ -80,15 +86,10 @@ body {
   display: none;
 }
 
-/* Main Content */
-.main-content.blur {
-  filter: blur(5px);
-  pointer-events: none;
-}
-
+/* Profile Section */
 .profile-container {
-  width: 600px;
-  max-width: 90vw;
+  max-width: 700px;
+  width: 100%;
   text-align: left;
 }
 
@@ -107,21 +108,20 @@ body {
 }
 
 .profile-container h1 {
-  font-size: 1.25rem;
-  margin-bottom: 0.25rem;
+  font-size: 1.5rem;
 }
 
 .profile-container p {
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .social-icons i {
-  font-size: 1.1rem;
-  margin-right: 10px;
+  font-size: 1.2rem;
   margin-top: 6px;
   vertical-align: middle;
   display: inline-block;
+  transition: transform 0.2s ease;
 }
 
 .social-icons i:hover {
@@ -146,36 +146,12 @@ body {
 
 .youtube-video {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 ratio */
-  height: 0;
   overflow: hidden;
-  max-width: 600px;
+  max-width: 700px;
   width: 100%;
   margin: 0 auto;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-}
-
-.youtube-video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  border-radius: 20px;
-}
-
-
-@media (max-width: 480px) {
-  .youtube-video {
-    max-width: 300px;
-    margin: 0 auto;
-  }
-
-  .youtube-video iframe {
-    height: 170px;
-  }
 }
 
 /* Footer */
@@ -189,12 +165,21 @@ body {
   color: #ccc;
 }
 
-.page-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+/* Responsive */
+@media (max-width: 576px) {
+  .profile-container {
+    text-align: center;
+  }
 
-.main-content {
-  flex-grow: 1;
+  .profile-container h1 {
+    font-size: 1.25rem;
+  }
+
+  .youtube-wrapper h2 {
+    font-size: 20px;
+  }
+
+  .youtube-video iframe {
+    height: 200px;
+  }
 }

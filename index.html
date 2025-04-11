@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="page-container d-flex flex-column min-vh-100">
-  
+
     <!-- Overlay Blur -->
     <div class="overlay-blur" id="overlayBlur"></div>
 
@@ -30,19 +30,19 @@
     </div>
 
     <!-- Main Content -->
-    <div class="main-content" id="mainContent">
-      <div class="d-flex flex-column align-items-center mt-2">
+    <main class="main-content flex-grow-1" id="mainContent">
+      <div class="d-flex flex-column align-items-center mt-4 px-3">
         <div class="profile-container text-white">
-          <div class="d-flex align-items-center gap-3">
+          <div class="d-flex flex-column flex-sm-row align-items-center gap-3 text-center text-sm-start">
             <div class="profile-circle">
-              <img src="aldi.png.jpg" alt="Profile Photo">
+              <img src="aldi.png.jpg" alt="Profile Photo" />
             </div>
             <div>
               <h1 class="mb-1">
                 <strong>I Kadek Aldi Bragi</strong>
                 <i class="fa-solid fa-circle-check text-primary"></i>
               </h1>
-              <div class="social-icons">
+              <div class="social-icons mt-1">
                 <a href="https://www.youtube.com/@whishin" target="_blank"><i class="fab fa-youtube text-danger me-2"></i></a>
                 <a href="https://instagram.com/idekaldi/" target="_blank"><i class="fab fa-instagram text-pink me-2"></i></a>
                 <a href="https://www.linkedin.com/in/aldi-bragi/" target="_blank"><i class="fab fa-linkedin text-info"></i></a>
@@ -54,35 +54,33 @@
             My expertise spans from building reliable IT infrastructure to creating engaging visual content through videography and photography.
           </p>
         </div>
-      </div>
-    </div>
 
-    <!-- YouTube Video -->
-    <div class="youtube-wrapper text-white text-center mt-5">
-      <h2 class="mb-3">My Project Video</h2>
-      <div class="youtube-video">
-        <div class="ratio ratio-16x9">
-          <iframe 
-            src="https://www.youtube.com/embed/J5zx1mV8s8U" 
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
+        <!-- YouTube Video -->
+        <div class="youtube-wrapper text-white text-center mt-5 w-100">
+          <h2 class="mb-3">My Project Video</h2>
+          <div class="youtube-video">
+            <div class="ratio ratio-16x9">
+              <iframe 
+                src="https://www.youtube.com/embed/J5zx1mV8s8U" 
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
 
     <!-- Footer -->
-    <footer class="text-center text-white mt-5 p-3 footer-custom">
+    <footer class="text-center text-white p-3 footer-custom mt-auto">
       <p class="mb-1">© 2025 Aldi Bragi, All Rights Reserved</p>
       <a href="mailto:kadekaldy@gmail.com" class="text-white fs-5">
         <i class="fas fa-envelope"></i>
       </a>
     </footer>
-
-  </div> <!-- END .page-container -->
+  </div>
 
   <script src="script.js"></script>
 </body>
-
 </html>
