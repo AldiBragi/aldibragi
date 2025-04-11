@@ -135,7 +135,7 @@ body {
 
 /* YouTube */
 .youtube-wrapper {
-  padding: 0 16px;
+  padding: 0 16px 32px;
 }
 
 .youtube-wrapper h2 {
