@@ -181,3 +181,14 @@ body {
 .footer-custom a:hover {
   color: #ccc;
 }
+
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #000; /* Sesuaikan dengan warna background kamu */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 100;
+}
