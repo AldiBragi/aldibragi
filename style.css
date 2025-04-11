@@ -1,214 +1,231 @@
 body {
-    background-color: #000000;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', sans-serif;
+  background-color: #000000;
+  margin: 0;
+  padding: 40px 0 0 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* Hamburger */
+.hamburger {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+
+
+/* Side Menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  height: 100%;
+  width: 250px;
+  background-color: #ffffff;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+  transition: right 0.3s ease;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.side-menu.show {
+  right: 0;
+}
+
+.side-menu .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  color: #000;
+  cursor: pointer;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 70px 0 0 0;
+  margin: 0;
+}
+
+.side-menu ul li {
+  margin-bottom: 20px;
+}
+
+.side-menu ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.side-menu ul li a:hover {
+  color: #007bff;
+  font-weight: bold;
+}
+
+
+/* Blur Overlay */
+.overlay-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 900;
+  display: none;
+}
+
+/* Main Content */
+.main-content {
+  transition: filter 0.3s ease;
+}
+
+.main-content.blur {
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+/* Profile Container */
+.profile-container {
+  width: 600px;
+  max-width: 90vw;
+  text-align: left;
+}
+
+.profile-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.profile-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-container h1 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.profile-container p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.social-icons i {
+  font-size: 1.1rem;
+  margin-right: 10px;
+  margin-top: 6px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);
+  opacity: 0.9;
+}
+
+.text-pink {
+  color: #e1306c;
+}
+
+/* YouTube */
+.youtube-wrapper {
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.youtube-wrapper h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.youtube-video {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+
+@media (max-width: 480px) {
+  .youtube-video {
+    max-width: 300px; /* atau sesuaikan sesuai keinginan */
+    margin: 0 auto;
   }
-  
-  /* Navbar Gradient */
+
+  .youtube-video iframe {
+    height: 170px; /* kecilkan tinggi videonya juga */
+  }
+}
+
+.youtube-video {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+
+
+/* Footer */
+.footer-custom {
+  background-color: #111;
+  font-size: 14px;
+  border-top: 1px solid #444;
+  margin-top: auto;
+}
+
+.footer-custom a:hover {
+  color: #ccc;
+}
+
+/* Animation */
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .navbar-gradient {
-    width: 800px;
-    max-width: 90vw;
-    height: 150px;
-    margin: 30px auto 0;
-    background: linear-gradient(135deg, #c2e9fb, #a1c4fd, #d4fc79, #96e6a1, #fbc2eb);
-    background-size: 400% 400%;
-    animation: gradientMove 10s ease infinite;
-    border-radius: 20px;
-    position: relative;
-    z-index: 1;
-  }
-  
-
-  .youtube-video {
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  }
-  
-
-
-  /* Hamburger Icon */
-  .hamburger {
-    position: fixed;
-    top: 15px;
-    right: 20px;
-    font-size: 28px;
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    transition: opacity 0.3s ease;
-    z-index: 999;
-  }
-  
-  
-  /* Side Menu */
-  .side-menu {
-    position: fixed;
-    top: 0;
-    right: -250px;
-    height: 100%;
-    width: 250px;
-    background-color: #ffffff;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
-    transition: right 0.3s ease;
-    padding: 20px;
-    z-index: 1000;
-  }
-  
-  .side-menu.show {
-    right: 0;
-  }
-  
-  .side-menu .close-btn {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 24px;
-    color: #000;
-    cursor: pointer;
-  }
-  
-  .side-menu ul {
-    list-style: none;
-    padding: 70px 0 0 0;
-    margin: 0;
-  }
-  
-  .side-menu ul li {
-    margin-bottom: 20px;
-  }
-  
-  .side-menu ul li a {
-    text-decoration: none;
-    color: #000;
-    font-size: 18px;
-  }
-  
-  /* Blur Effect */
-  .main-content {
-    transition: filter 0.3s ease;
-  }
-  
-  .main-content.blur {
-    filter: blur(5px);
-    pointer-events: none;
-  }
-  
-  /* Profile Container */
-  .profile-container {
-    width: 800px;
-    max-width: 90vw;
-    text-align: left;
-  }
-  
-  .profile-circle {
-    width: 120px;
-    height: 120px;
-    border: 4px solid black;
-    border-radius: 50%;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-  
-  .profile-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .social-icons i {
-    margin-top: 10px; /* bisa diubah sesuai kebutuhan */
-    display: inline-block; /* supaya margin/transform berfungsi */
-    vertical-align: middle;
-  }
-  
-  
-  .social-icons i:hover {
-    transform: scale(1.2);
-    opacity: 0.9;
-  }
-  
-  .text-pink {
-    color: #e1306c;
-  }
-  
-  /* Gradient animation */
-  @keyframes gradientMove {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-  }
-
-  .overlay-blur {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0.2); /* sedikit gelap */
-    z-index: 900;
-    display: none;
-  }
-  
-  @media (max-width: 768px) {
-    .navbar-gradient {
-      margin-top: 60px; /* supaya hamburger tidak ketiban */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    body {
-      padding-top: 20px; /* kasih ruang untuk hamburger */
-    }
-  }
- 
-  .youtube-wrapper {
-    padding: 0 16px; /* kasih jarak kiri-kanan */
-    box-sizing: border-box;
-  }
-  
-  .youtube-video {
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  }
-
-  @media (max-width: 480px) {
-    .youtube-wrapper {
-      padding: 0 12px;
-    }
-  }
-
-  .youtube-wrapper h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
-  }
-  
-
-  .footer-custom {
-    background-color: #111; /* bisa disesuaikan */
-    font-size: 14px;
-    border-top: 1px solid #444;
-  }
-  .footer-custom a:hover {
-    color: #ccc;
+    margin-top: 60px;
   }
 
   body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    padding-top: 20px;
   }
-  
-  footer {
-    margin-top: auto;
+
+  .profile-container h1 {
+    font-size: 1rem;
   }
-  
+
+  .profile-container p {
+    font-size: 0.9rem;
+  }
+
+  .social-icons i {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
