@@ -1,9 +1,11 @@
+/* ========== STYLE UMUM ========== */
 body {
   background-color: #000;
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
 }
 
+/* Membuat kontainer penuh tinggi halaman */
 .page-container {
   display: flex;
   flex-direction: column;
@@ -14,7 +16,7 @@ body {
   flex-grow: 1;
 }
 
-/* Hamburger */
+/* ========== HAMBURGER MENU ========== */
 .hamburger {
   position: fixed;
   top: 15px;
@@ -25,13 +27,13 @@ body {
   z-index: 999;
 }
 
-/* Side Menu */
+/* ========== SIDE MENU ========== */
 .side-menu {
   position: fixed;
   top: 0;
   right: -250px;
-  height: 100%;
   width: 250px;
+  height: 100%;
   background-color: #fff;
   box-shadow: -2px 0 5px rgba(0,0,0,0.5);
   transition: right 0.3s ease-in-out;
@@ -39,10 +41,12 @@ body {
   z-index: 1000;
 }
 
+/* Kelas tambahan saat menu terbuka */
 .side-menu.show {
   right: 0;
 }
 
+/* Tombol tutup menu */
 .side-menu .close-btn {
   position: absolute;
   top: 15px;
@@ -52,9 +56,10 @@ body {
   cursor: pointer;
 }
 
+/* Daftar menu */
 .side-menu ul {
   list-style: none;
-  padding: 70px 0 0 0;
+  padding-top: 70px;
   margin: 0;
 }
 
@@ -73,7 +78,7 @@ body {
   font-weight: bold;
 }
 
-/* Blur Overlay */
+/* ========== OVERLAY BLUR ========== */
 .overlay-blur {
   position: fixed;
   top: 0;
@@ -86,7 +91,13 @@ body {
   display: none;
 }
 
-/* Profile Section */
+/* Tambahan efek blur pada main content saat menu aktif */
+.blur {
+  filter: blur(4px);
+  transition: filter 0.3s ease;
+}
+
+/* ========== PROFILE SECTION ========== */
 .profile-container {
   max-width: 700px;
   width: 100%;
@@ -116,6 +127,7 @@ body {
   line-height: 1.6;
 }
 
+/* ========== SOCIAL ICONS ========== */
 .social-icons i {
   font-size: 1.2rem;
   margin-top: 6px;
@@ -133,7 +145,7 @@ body {
   color: #e1306c;
 }
 
-/* YouTube */
+/* ========== YOUTUBE SECTION ========== */
 .youtube-wrapper {
   padding: 0 16px 32px;
 }
@@ -154,7 +166,7 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
-/* Footer */
+/* ========== FOOTER ========== */
 .footer-custom {
   background-color: #111;
   font-size: 14px;
@@ -165,7 +177,7 @@ body {
   color: #ccc;
 }
 
-/* Responsive */
+/* ========== RESPONSIVE DESIGN ========== */
 @media (max-width: 576px) {
   .profile-container {
     text-align: center;

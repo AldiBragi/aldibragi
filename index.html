@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aldi Bragi</title>
+
+  <!-- Link Bootstrap untuk styling responsif -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Link Font Awesome untuk ikon sosial dan menu -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Link ke file CSS lokal -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="page-container d-flex flex-column min-vh-100">
 
-    <!-- Overlay Blur -->
+    <!-- Overlay blur saat menu samping aktif -->
     <div class="overlay-blur" id="overlayBlur"></div>
 
-    <!-- Hamburger Icon -->
+    <!-- Tombol hamburger untuk membuka menu -->
     <div class="hamburger" id="hamburger">
       <i class="fas fa-bars"></i>
     </div>
 
-    <!-- Side Menu -->
+    <!-- Menu samping -->
     <div class="side-menu" id="sideMenu">
       <div class="close-btn" id="closeBtn">&times;</div>
       <ul>
@@ -29,19 +35,23 @@
       </ul>
     </div>
 
-    <!-- Main Content -->
+    <!-- Konten utama halaman -->
     <main class="main-content flex-grow-1" id="mainContent">
       <div class="d-flex flex-column align-items-center mt-4 px-3">
         <div class="profile-container text-white">
           <div class="d-flex flex-column flex-sm-row align-items-center gap-3 text-center text-sm-start">
             <div class="profile-circle">
-              <img src="aldi.png.jpg" alt="Profile Photo" />
+              <!-- Gambar profil -->
+              <img src="aldi.png.jpg" alt="Foto Profil I Kadek Aldi Bragi" />
             </div>
             <div>
+              <!-- Nama dan ikon centang -->
               <h1 class="mb-1">
                 <strong>I Kadek Aldi Bragi</strong>
                 <i class="fa-solid fa-circle-check text-primary"></i>
               </h1>
+
+              <!-- Ikon media sosial -->
               <div class="social-icons mt-1">
                 <a href="https://www.youtube.com/@whishin" target="_blank"><i class="fab fa-youtube text-danger me-2"></i></a>
                 <a href="https://instagram.com/idekaldi/" target="_blank"><i class="fab fa-instagram text-pink me-2"></i></a>
@@ -49,20 +59,22 @@
               </div>
             </div>
           </div>
+
+          <!-- Deskripsi singkat -->
           <p class="mt-3">
-            I am an Informatics graduate with strong skills in computer networking, graphic design, and creative content production.<br />
-            My expertise spans from building reliable IT infrastructure to creating engaging visual content through videography and photography.
+            Saya lulusan Informatika dengan keahlian di bidang jaringan komputer, desain grafis, dan produksi konten kreatif.<br />
+            Keahlian saya mencakup pembuatan infrastruktur TI yang handal hingga produksi visual melalui videografi dan fotografi.
           </p>
         </div>
 
-        <!-- YouTube Video -->
+        <!-- Video YouTube -->
         <div class="youtube-wrapper text-white text-center mt-5 w-100">
           <h2 class="mb-3">My Project Video</h2>
           <div class="youtube-video">
             <div class="ratio ratio-16x9">
               <iframe 
                 src="https://www.youtube.com/embed/J5zx1mV8s8U" 
-                title="YouTube video player"
+                title="Video Proyek Aldi Bragi"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen>
               </iframe>
@@ -81,6 +93,7 @@
     </footer>
   </div>
 
+  <!-- Link ke file JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
