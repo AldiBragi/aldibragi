@@ -136,6 +136,7 @@ body {
   vertical-align: middle;
   display: inline-block;
   transition: transform 0.2s ease;
+  color: white !important; /* Pastikan semua icon jadi putih */
 }
 
 .social-icons i:hover {
@@ -144,8 +145,14 @@ body {
 }
 
 .text-pink {
-  color: #e1306c;
+  color: #e1306c !important; /* Ini masih bisa ditambahkan jika ingin warna pink pada Instagram */
 }
+
+.text-white {
+  color: white !important; /* Pastikan semua icon putih */
+}
+
+
 
 /* ========== YOUTUBE SECTION ========== */
 .youtube-wrapper {
