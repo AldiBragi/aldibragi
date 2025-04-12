@@ -5,7 +5,6 @@ body {
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* Membuat kontainer penuh tinggi halaman */
 .page-container {
   display: flex;
   flex-direction: column;
@@ -41,12 +40,10 @@ body {
   z-index: 1000;
 }
 
-/* Kelas tambahan saat menu terbuka */
 .side-menu.show {
   right: 0;
 }
 
-/* Tombol tutup menu */
 .side-menu .close-btn {
   position: absolute;
   top: 15px;
@@ -56,7 +53,6 @@ body {
   cursor: pointer;
 }
 
-/* Daftar menu */
 .side-menu ul {
   list-style: none;
   padding-top: 70px;
@@ -91,7 +87,6 @@ body {
   display: none;
 }
 
-/* Tambahan efek blur pada main content saat menu aktif */
 .blur {
   filter: blur(4px);
   transition: filter 0.3s ease;
@@ -127,36 +122,9 @@ body {
   line-height: 1.6;
 }
 
-/* ========== SOCIAL ICONS ========== */
-.social-icons i {
-  font-size: 1.2rem;
-  margin-top: 6px;
-  margin-left: 15px;
-  margin-right: 15px;
-  vertical-align: middle;
-  display: inline-block;
-  transition: transform 0.2s ease;
-  color: white !important; /* Pastikan semua icon jadi putih */
-}
-
-.social-icons i:hover {
-  transform: scale(1.2);
-  opacity: 0.9;
-}
-
-.text-pink {
-  color: #e1306c !important; /* Ini masih bisa ditambahkan jika ingin warna pink pada Instagram */
-}
-
-.text-white {
-  color: white !important; /* Pastikan semua icon putih */
-}
-
-
-
 /* ========== YOUTUBE SECTION ========== */
 .youtube-wrapper {
-  padding: 0 16px 32px;
+  padding: 16px 16px 64px; /* tambahkan padding bawah agar tidak mepet di mobile */
 }
 
 .youtube-wrapper h2 {
@@ -175,6 +143,29 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
+/* ========== SOCIAL ICONS ========== */
+.social-icons i {
+  font-size: 1.2rem;
+  margin: 6px 15px;
+  vertical-align: middle;
+  display: inline-block;
+  transition: transform 0.2s ease;
+  color: white !important;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);
+  opacity: 0.9;
+}
+
+.text-pink {
+  color: #e1306c !important;
+}
+
+.text-white {
+  color: white !important;
+}
+
 /* ========== FOOTER ========== */
 .footer-custom {
   background-color: #111;
@@ -186,22 +177,18 @@ body {
   color: #ccc;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 576px) {
   .profile-container {
     text-align: center;
   }
 
-  .profile-container h1 {
-    font-size: 1.25rem;
+  .youtube-wrapper {
+    margin-top: 32px;
+    padding-bottom: 80px; /* agar tidak mentok di bawah saat di HP */
   }
 
-  .youtube-wrapper h2 {
-    font-size: 20px;
-  }
-
-  .youtube-video iframe {
-    height: 250px;
+  .profile-container p {
+    font-size: 0.9rem;
   }
 }
-
