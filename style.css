@@ -195,7 +195,7 @@ body {
 /* ========== RESPONSIVE ========== */
 @media (max-width: 576px) {
   .profile-container {
-    text-align: center;
+    text-align: left;
   }
 
   .youtube-wrapper {
