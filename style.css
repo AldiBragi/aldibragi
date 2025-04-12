@@ -1,6 +1,6 @@
 /* ========== STYLE UMUM ========== */
 body {
-  background-color: #000;
+  background-color: #ffffff;
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -22,7 +22,7 @@ body {
   right: 20px;
   font-size: 28px;
   cursor: pointer;
-  color: white;
+  color: rgb(0, 0, 0);
   z-index: 999;
 }
 
@@ -130,7 +130,7 @@ body {
 .youtube-wrapper h2 {
   font-size: 24px;
   font-weight: bold;
-  color: #ffffff;
+  color: #000000;
 }
 
 .youtube-video {
@@ -140,7 +140,7 @@ body {
   width: 100%;
   margin: 0 auto;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 /* buat font design*/
@@ -148,7 +148,7 @@ body {
   font-size: 24px;
   margin-top: -30px;
   font-weight: bold;
-  color: #ffffff;
+  color: #000000;
 }
 
 .responsive-img{
@@ -165,7 +165,7 @@ body {
   vertical-align: middle;
   display: inline-block;
   transition: transform 0.2s ease;
-  color: white !important;
+  color: rgb(0, 0, 0) !important;
 }
 
 .social-icons i:hover {
@@ -178,18 +178,18 @@ body {
 }
 
 .text-white {
-  color: white !important;
+  color: rgb(0, 0, 0) !important;
 }
 
 /* ========== FOOTER ========== */
 .footer-custom {
-  background-color: #111;
+  background-color: #ffffff;
   font-size: 14px;
   border-top: 1px solid #444;
 }
 
 .footer-custom a:hover {
-  color: #ccc;
+  color: #000000;
 }
 
 /* ========== RESPONSIVE ========== */
