@@ -94,7 +94,7 @@ body {
 
 /* ========== PROFILE SECTION ========== */
 .profile-container {
-  max-width: 700px;
+  max-width: 600px;
   width: 100%;
   text-align: left;
 }
@@ -136,13 +136,28 @@ body {
 .youtube-video {
   position: relative;
   overflow: hidden;
-  max-width: 700px;
+  max-width: 600px;
   width: 100%;
   margin: 0 auto;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
+/* buat font design*/
+.design-wrapper h2 {
+  font-size: 24px;
+  margin-top: -30px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.responsive-img{
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 100px;
+}
 /* ========== SOCIAL ICONS ========== */
 .social-icons i {
   font-size: 1.2rem;
@@ -192,3 +207,4 @@ body {
     font-size: 0.9rem;
   }
 }
+

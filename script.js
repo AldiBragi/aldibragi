@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
     mainContent.classList.remove("blur");
   });
 
+
+  
   // Klik di area overlay juga akan menutup menu
   overlayBlur.addEventListener("click", () => {
     sideMenu.classList.remove("show");
@@ -28,3 +30,4 @@ document.addEventListener("DOMContentLoaded", function () {
     mainContent.classList.remove("blur");
   });
 });
+
