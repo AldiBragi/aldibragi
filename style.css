@@ -131,6 +131,8 @@ body {
 .social-icons i {
   font-size: 1.2rem;
   margin-top: 6px;
+  margin-left: 15px;
+  margin-right: 15px;
   vertical-align: middle;
   display: inline-block;
   transition: transform 0.2s ease;
@@ -195,3 +197,4 @@ body {
     height: 200px;
   }
 }
+
